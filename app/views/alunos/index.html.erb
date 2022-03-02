@@ -22,7 +22,7 @@
             <td><%= aluno.prontuario %></td>
             <td><%= link_to 'Detalhes', aluno %></td>
             <td><%= link_to 'Editar', edit_aluno_path(aluno) %></td>
-            <td><%= link_to 'Deletar', aluno, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Deletar', aluno, method: :delete, data: { confirm: 'Tem certeza que deseja deletar este cadastro?' } %></td>
           </tr>
         <% end %>
         <tr>

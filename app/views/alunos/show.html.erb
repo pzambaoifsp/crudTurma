@@ -20,7 +20,7 @@
       <tr>
         <th colspan="3" style="text-align:right;">
           <%=  link_to "Editar detalhes", edit_aluno_path(@aluno) %>  -- 
-          <%= link_to "Deletar aluno", aluno_path(@aluno), class: "text-danger", method: :delete, data:{ confirm: "Tem certeza que deseja apagar este aluno?"}%>
+          <%= link_to "Deletar aluno", aluno_path(@aluno), class: "text-danger", method: :delete, data: { confirm: 'Tem certeza que deseja deletar este cadastro?' }%>
         </th>
       </tr>
     </table>
