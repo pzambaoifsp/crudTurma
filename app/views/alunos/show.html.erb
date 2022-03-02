@@ -1,0 +1,28 @@
+
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  <div class="row">
+    <table class="table table-striped ">
+      <thead>
+        <tr>
+          <th colspan="3"><font size=5>Detalhes do aluno</font></td>
+          <th colspan="3" style="text-align:right;"><%= link_to "Listar alunos", alunos_path %></td>
+        </tr>
+      </thead>
+    </table>
+    <h5><b>ID: </b><%= @aluno.id %></h5>
+    <h5><b>Turma: </b><%= @aluno.turma %></h5>
+    <h5><b>Nome: </b><%= @aluno.nome %></h5>
+    <h5><b>Email: </b><%= @aluno.email %></h5>
+    <h5><b>Prontuário: </b><%= @aluno.prontuario %></h5>
+    <table class="table table-striped ">
+      <tr>
+        <th colspan="3" style="text-align:right;">
+          <%=  link_to "Editar detalhes", edit_aluno_path(@aluno) %>  -- 
+          <%= link_to "Deletar aluno", aluno_path(@aluno), class: "text-danger", method: :delete, data:{ confirm: "Tem certeza que deseja apagar este aluno?"}%>
+        </th>
+      </tr>
+    </table>
+  </div>
+</div>

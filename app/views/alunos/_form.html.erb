@@ -1,0 +1,30 @@
+<%= form_for(@aluno) do |f| %>
+  <% if @aluno.errors.any? %>
+    <div class="alert alert-danger">
+      <ul>
+        <% @aluno.errors.full_messages.each do |mensagem| %>
+          <li><%= mensagem %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <p class="form-group">
+    <%= f.label :Turma %>
+    <%= f.text_field :turma, class:"form-control", placeholder: "Ex. SSID"%>
+  </p>
+  <p class="form-group ">
+    <%= f.label :Nome %>
+    <%= f.text_field :nome, class:"form-control", placeholder: "Ex. Pedro Zambão" %>
+  </p>
+  <p class="form-group">
+    <%= f.label :Email %>
+    <%= f.text_field :email, class: "form-control", placeholder: "Ex. pedrozambao@mail.com" %>
+  </p>
+  <p class="form-group">
+    <%= f.label :Prontuario %>
+    <%= f.text_field :prontuario, class:"form-control", placeholder: 'Ex. GU301262X' %>
+  </p>
+
+  <%= f.submit value: 'Salvar', class:'btn btn-primary' %>
+<% end %>
+
